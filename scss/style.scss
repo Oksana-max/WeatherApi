@@ -1,0 +1,104 @@
+@import "./reset";
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    background-image: url("https://picsum.photos/1920/1080");
+    background-size: cover;
+}
+
+[class*="__container"] {
+    max-width: 1100px;
+    margin: 0px auto;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: #000000da;
+    padding: 25px;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    min-height: 270px;
+    // .card__search
+}
+
+.search {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 30px;
+    // .search__input
+    &__input {
+        width: 100%;
+        border-radius: 10px;
+        height: 33px;
+        background-color: #4b4747e5;
+        color: #ffffff;
+        padding: 0px 10px 0 10px;
+        font-family: inherit;
+        border: 1px solid transparent;
+        &:focus {
+            border: 1px solid #878383;
+        }
+    }
+    // .search__btn
+    &__btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5px;
+        border-radius: 10px;
+        background: transparent;
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.2);
+                transition: transform 0.2s ease-in-out;
+            }
+        }
+    }
+}
+
+.content {
+    // .content__title
+    &__title {
+        padding: 0px 5px 20px 0px;
+        font-size: 24px;
+    }
+    &__degree {
+        font-size: 24px;
+        padding: 0px 5px 1px 0px;
+    } // .content__description
+    &__description {
+        padding: 0px 5px 2px 0px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    // .content__icon
+    &__icon {
+        height: 80px;
+        width: 80px
+    }
+    // .content__descText
+    &__descText {
+        padding: 0px 5px 1px 0px;
+    }
+    // .content__humidity
+    &__humidity {
+        padding: 0px 5px 10px 0px;
+    }
+    // .content__windSpeed
+    &__windSpeed {
+        padding: 0px 5px 7px 0px;
+    }
+}
